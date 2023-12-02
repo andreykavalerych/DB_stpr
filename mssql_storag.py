@@ -19,7 +19,7 @@ badcopySQL_modules=list()
 countCOPY=0
 countDB=0
 cursor = connection.cursor()
-storprocDIR = "stored_procedureDB" #папка для сохранения процедур
+storprocDIR = "stored_procedureMSSQL" #папка для сохранения процедур
 # Получение списка хранимых процедур
 cursor.execute(f"SELECT count(name) FROM {DATABASE}.sys.procedures where type_desc='SQL_STORED_PROCEDURE'")
 countDB=cursor.fetchone() #cursor.fetchone(): Извлекает одну запись (строку) из результата запроса.
